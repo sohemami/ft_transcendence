@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"  # Utilisez une version spécifique pour une meilleure compatibilité
 
 services:
   backend:
@@ -14,6 +14,18 @@ services:
       - db
     networks:
       - ft_transcendence
+  
+  frontend:
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - ft_transcendence
+    
 
   db:
     image: postgres:latest
@@ -26,11 +38,14 @@ services:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+    networks:
+      - ft_transcendence  # Assurez-vous que le service db est également sur le réseau ft_transcendence
 
 networks:
-  ft_transcendence:
+  ft_transcendence:  # Définition explicite du réseau pour une meilleure visibilité
     driver: bridge
 
 volumes:
-  db_data:
+  db_data:  # Définition explicite du volume pour la persistance des données
+
 

@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'trans',
         'USER': 'Transcendence',
         'PASSWORD': 'postgres',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432'
     }
 }

@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.carousel-inner {
+    width: 50%; /* Réduire la largeur du carrousel à 80% de la largeur disponible */
+    margin: 0 auto; /* Centrer horizontalement le carrousel en utilisant la marge automatique */
+}
+
+.carousel-inner img {
+    height: 80vh; /* Réduire la hauteur des images à 300 pixels */
+    object-fit: cover; /* Redimensionner et recadrer les images pour qu'elles remplissent complètement le conteneur */
+}
+
+
+#centered-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(15, 80, 15);
+    font-weight: bold; /* Rendre le titre plus gras */
+    font-size: 24px; /* Définir la taille du titre */
+}
+
+.btn {
+    color: rgb(38, 103, 141);
+}
+
+.navbar {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 80px !important;
+    height: 80px; /* Hauteur de la navbar */
+    background-color: grey;
+}
+
