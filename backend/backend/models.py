@@ -8,7 +8,7 @@ class Connect(models.Model):
     completed = models.BooleanField()
     favorite = models.BooleanField()
 
-    list = models.ForeignKey('ToList', null=False, on_delete=models.CASCADE)
+    list = models.ForeignKey('ToList', null=False, on_delete=models.C)
 
 class ToList(models.Model):
     name = models.CharField(max_length=255)
