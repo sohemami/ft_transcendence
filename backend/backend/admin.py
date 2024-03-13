@@ -4,7 +4,7 @@ from .models import UserProfile, ChatMessage, GameSession
 # enregistrement du UserProfile
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-    list_display = ('user', 'avatar')
+    list_display = ('user', 'display_name', 'wins', 'losses', 'winrate')
 
 # enregistrement du ChatMessage
 @admin.register(ChatMessage)
