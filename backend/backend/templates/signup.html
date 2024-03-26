@@ -1,0 +1,11 @@
+{% extends 'base.html' %}  {# Assurez-vous que vous avez un template de base nommé base.html #}
+{% load static %}  {# Charge les tags pour utiliser les fichiers statiques #}
+
+{% block content %}
+<h1>Inscription</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}  {# Token CSRF pour la sécurité des formulaires #}
+    {{ form.as_p }}  {# Rendu du formulaire en paragraphes #}
+    <button type="submit">S'inscrire</button>
+</form>
+{% endblock %}

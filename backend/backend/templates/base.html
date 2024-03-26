@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Application Django{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  {# Assurez-vous d'avoir un fichier style.css dans votre dossier static/css #}
+</head>
+<body>
+    <header>
+        <h1>Mon Application Django</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'signup' %}">Inscription</a>
+        <a href="{% url 'profile_update' %}">Mise à jour du profil</a>
+        <!-- Ajoutez d'autres liens de navigation au besoin -->
+    </nav>
+    
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 Mon Application Django. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

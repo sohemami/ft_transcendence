@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.db.models import JSONField
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -9,6 +10,8 @@ class UserProfile(models.Model):
     avatar = models.ImageField(upload_to='avatars/', default='avatars/default.png')
     wins = models.PositiveIntegerField(default=0)
     losses = models.PositiveIntegerField(default=0)
+    game_history = JSONField(default=list)
+    friends = models.ManyToManyField('self', blank=True)
 
     @property
     def winrate(self):
@@ -23,8 +26,11 @@ class UserProfile(models.Model):
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
-    instance.Userprofile.save()
+    else:
+        instance.Userprofile.save()
 
+
+# ChatMessage ? 
 class ChatMessage(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='messages')
     message = models.TextField()
@@ -33,6 +39,8 @@ class ChatMessage(models.Model):
     def __str__(self):
         return f"{self.author.username} at {self.timestamp.strftime('%Y-%m-%d %H:%M:%S')}"
 
+
+# GameSession ? 
 class GameSession(models.Model):
     players = models.ManyToManyField(User, related_name='game_sessions')
     start_time = models.DateTimeField(auto_now_add=True)

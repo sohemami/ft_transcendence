@@ -1,0 +1,11 @@
+{% extends 'base.html' %}  {# Utilise le même template de base pour la cohérence #}
+{% load static %}
+
+{% block content %}
+<h1>Mise à jour du profil</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Mettre à jour</button>
+</form>
+{% endblock %}
