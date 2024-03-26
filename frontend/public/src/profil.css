@@ -1,0 +1,70 @@
+#Profil {
+    margin-top: 100px;
+}
+
+
+#search {
+    border: 2px solid #ff414e;
+    border-radius: 5px;
+    padding: 1Opx 20px;
+    color: #ffde22;
+}
+
+#card2 {
+    margin-top: 150px;
+    align-content: center;
+}
+
+#cardBtn {
+    color: white;
+    background-color: #ff8928;
+    border: 2px solid white;
+    border-radius: 5px;
+    align-content: center;
+  
+}
+#cardBtn:hover {
+    border-color: #ff8928;
+    background-color: #ff414e !important;
+    color: #ffde22 !important;
+}
+
+#ProfilBtn {
+    color: #ffde22;
+    background-color: #0B0C10;
+    border: 2px solid #ff8928;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+#ProfilBtn:hover {
+    background-color: #ff414e !important;
+    color: white !important;
+}
+
+#Prenom {
+    margin-top: -70px;
+}
+
+#modifBtn {
+    color: #ffde22;
+    background-color: #0B0C10;
+    border: 2px solid #ff8928;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#modifBtn:hover {
+    color: #ff414e;
+    background-color: #ff8928;
+    border: #ff414e 2px solid;
+}
+
+#lost {
+    margin-right: 300px;
+}
+
+
+

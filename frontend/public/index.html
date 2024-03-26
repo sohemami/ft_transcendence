@@ -3,58 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link rel="stylesheet" type="text/css" href="src/home.css">
+    <link rel="stylesheet" type="text/css" href="src/login.css">
+    <link rel="stylesheet" type="text/css" href="src/chat.css">
 </head>
-<body>
-    <!-- Navbar sans marge en haut -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="btn-group ml-auto" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-lg">SIGNIN</button>
-            <button type="button" class="btn btn-lg">SIGNUP</button>
-        </div>
-    </nav>
-     <!-- Conteneur pour le titre et la table de ping-pong -->
-<div class="container text-center d-flex flex-column align-items-center">
-    <!-- Titre -->
-    <h1 class="title">PONG</h1>
-
-    <!-- Terrain de jeu -->
-    <div class="wrap">
-        <div id="half"></div>
-        <div id="sidel"></div>
-        <div id="sider"></div>
-        <div id="ball"></div>
+<body id="Body">
+    <div class="container" id="app">
     </div>
-
-    <!-- Bouton PLAY -->
-    <button class="Btn mt-5">   
-        <svg class= "manette"
-        width="20" 
-        height="20" 
-        stroke-width="2"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        stroke="currentColor"
-        fill="none"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <!-- Votre contenu SVG ici -->
-        <!-- Par exemple, un triangle pointant vers la droite -->
-        <path d="M8 13V9m-2 2h4m5-2v.001M18 12v.001m4-.334v5.243a3.09 3.09 0 0 1-5.854 1.382L16 18a3.618 3.618 0 0 0-3.236-2h-1.528c-1.37 0-2.623.774-3.236 2l-.146.292A3.09 3.09 0 0 1 2 16.91v-5.243A6.667 6.667 0 0 1 8.667 5h6.666A6.667 6.667 0 0 1 22 11.667Z" />
-    </svg>
-        PLAY
-    </button>
-</div>
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-    <!-- Appel du fichier JavaScript externe -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="src/script.js"></script>
+    <script src="router.js" type="module"></script>
 </body>
 </html>
+
+
+
 
 
 

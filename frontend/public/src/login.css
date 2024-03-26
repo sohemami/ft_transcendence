@@ -1,0 +1,257 @@
+/* Import de la police de caractères Poppins depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+/* Styles généraux pour le corps de la page */
+#loginPage{
+	font-family: 'Wildest', sans-serif;/* Utilisation de la police de caractères */
+	font-weight: 300; /* Poids de la police */
+	font-size: 15px; /* Taille de la police */
+	line-height: 1.7; /* Hauteur de ligne */
+	color: #ffde22; /* Couleur du texte */
+	overflow-x: hidden; /* Masquer le défilement horizontal */
+}
+
+
+/* Styles pour les titres de niveau 4 */
+h4 {
+	font-weight: 600; /* Poids de la police */
+    text-shadow: 2px 2px 4px #ff414e;
+}
+
+/* Styles pour les éléments <h6> contenant des <span>  signin et signup*/
+h6 span {
+	padding: 0 20px; /* Espacement autour du texte */
+	text-transform: uppercase; /* Convertir le texte en majuscules */
+	font-weight: 700; /* Poids de la police */
+    text-shadow: 2px 2px 4px #ff414e;
+}
+
+/* Styles pour les sections */
+.section {
+	position: relative; /* Position relative */
+	width: 100%; /* Largeur de 100% */
+	display: block; /* Affichage en bloc */
+}
+
+/* Styles pour les sections occupant toute la hauteur de la fenêtre */
+.full-height {
+	min-height: 100vh; /* Hauteur minimale de la fenêtre */
+}
+
+/* Styles pour les cases à cocher */
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+	position: absolute; /* Position absolue */
+	left: -9999px; /* Déplacer hors de la vue */
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+	position: relative; /* Position relative */
+	display: block; /* Affichage en bloc */
+	text-align: center; /* Centrer le texte */
+	width: 60px; /* Largeur */
+	height: 16px; /* Hauteur */
+	border-radius: 8px; /* Bordure arrondie */
+	padding: 0; /* Aucun rembourrage */
+	margin: 10px auto; /* Marge automatique */
+	cursor: pointer; /* Curseur de type pointer */
+	background-color: #ff414e; /* Couleur de fond */
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+	position: absolute; /* Position absolue */
+	display: block; /* Affichage en bloc */
+	width: 36px; /* Largeur */
+	height: 36px; /* Hauteur */
+	border-radius: 50%; /* Bordure arrondie */
+	color: #ffeba7; /* Couleur du texte */
+	background-color: #ffde22; /* Couleur de fond */
+	font-family: 'unicons'; /* Police d'icônes */
+	content: '\eb4f'; /* Contenu de l'icône */
+	z-index: 20; /* Ordre z */
+	top: -10px; /* Position par rapport au haut */
+	left: -10px; /* Position par rapport à la gauche */
+	line-height: 36px; /* Hauteur de ligne */
+	text-align: center; /* Centrer le texte */
+	font-size: 24px; /* Taille de la police */
+	transition: all 0.5s ease; /* Transition fluide */
+}
+.checkbox:checked + label:before {
+	transform: translateX(44px) rotate(-270deg); /* Rotation de l'icône */
+}
+
+/* Styles pour les conteneurs des cartes 3D */
+.card-3d-wrap {
+	position: relative; /* Position relative */
+	width: 440px; /* Largeur */
+	max-width: 100%; /* Largeur maximale */
+	height: 400px; /* Hauteur */
+	transform-style: preserve-3d; /* Préserver la transformation 3D */
+	perspective: 800px; /* Perspective de la vue 3D */
+	margin-top: 60px; /* Marge supérieure */
+}
+.card-3d-wrapper {
+	width: 100%; /* Largeur de 100% */
+	height: 100%; /* Hauteur de 100% */
+	position: absolute; /* Position absolue */
+	top: 0; /* Position en haut */
+	left: 0; /* Position à gauche */
+	transform-style: preserve-3d; /* Préserver la transformation 3D */
+	transition: all 600ms ease-out; /* Transition fluide */
+}
+.card-front,
+.card-back {
+	width: 100%; /* Largeur de 100% */
+	height: 100%; /* Hauteur de 100% */
+	background-color: #444550; /* Couleur de fond */
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg'); /* Image de fond */
+	background-position: bottom center; /* Position de l'image de fond */
+	background-repeat: no-repeat; /* Ne pas répéter l'image de fond */
+	background-size: 300%; /* Taille de l'image de fond */
+	position: absolute; /* Position absolue */
+	border-radius: 6px; /* Bordure arrondie */
+	left: 0; /* Position à gauche */
+	top: 0; /* Position en haut */
+	transform-style: preserve-3d; /* Préserver la transformation 3D */
+	backface-visibility: hidden; /* Cacher l'arrière de l'élément */
+}
+.card-back {
+	transform: rotateY(180deg); /* Rotation de 180 degrés autour de l'axe Y */
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+	transform: rotateY(180deg); /* Rotation de 180 degrés autour de l'axe Y */
+}
+
+/* Styles pour l'enveloppe centrale */
+.center-wrap {
+    position: absolute; /* Position absolue par rapport à son conteneur parent */
+    width: 100%; /* Largeur de 100% */
+    padding: 0 35px; /* Rembourrage de 0 sur les côtés et 35px en haut et en bas */
+    top: 50%; /* Position à 50% de la hauteur du conteneur parent */
+    left: 0; /* Position à gauche du conteneur parent */
+    transform: translate3d(0, -50%, 35px) perspective(100px); /* Translation 3D pour centrer verticalement */
+    z-index: 20; /* Indice de positionnement */
+    display: block; /* Affichage en bloc */
+  }
+  
+  /* Styles pour le groupe de formulaire */
+  .form-group {
+    position: relative; /* Position relative */
+    display: block; /* Affichage en bloc */
+    margin: 0; /* Marge de 0 */
+    padding: 0; /* Rembourrage de 0 */
+  }
+  
+  /* Styles pour le formulaire */
+  .form-style {
+    padding: 13px 20px; /* Rembourrage de 13px en haut et en bas, 20px sur les côtés */
+    padding-left: 55px; /* Rembourrage supplémentaire à gauche */
+    height: 48px; /* Hauteur de 48px */
+    width: 100%; /* Largeur de 100% */
+    font-weight: 500; /* Poids de la police */
+    font-size: 14px; /* Taille de la police */
+    line-height: 22px; /* Hauteur de ligne */
+    letter-spacing: 0.5px; /* Espacement des lettres */
+    outline: none; /* Supprimer la bordure */
+    color: #ff8928;
+    background-color: #0B0C10;
+    border: 2px solid #ffde22;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: all 200ms linear; /* Transition fluide */
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2); /* Ombre portée */
+  }
+  
+  /* Styles pour le texte de placeholder dans les champs de formulaire */
+  .form-group input:-ms-input-placeholder,
+  .form-group input::-moz-placeholder,
+  .form-group input:-moz-placeholder,
+  .form-group input::-webkit-input-placeholder {
+    color: #c4c3ca; /* Couleur du texte */
+    opacity: 0.7; /* Opacité */
+    transition: all 200ms linear; /* Transition fluide */
+  }
+  
+  /* Styles pour le texte de placeholder au focus dans les champs de formulaire */
+  .form-group input:focus:-ms-input-placeholder,
+  .form-group input:focus::-moz-placeholder,
+  .form-group input:focus:-moz-placeholder,
+  .form-group input:focus::-webkit-input-placeholder {
+    opacity: 0; /* Masquer le texte de placeholder */
+    transition: all 200ms linear; /* Transition fluide */
+  }
+  
+  /* Styles pour l'icône à gauche des champs de formulaire */
+  .input-icon {
+    position: absolute; /* Position absolue */
+    top: 0; /* Position en haut */
+    left: 18px; /* Position à gauche */
+    height: 48px; /* Hauteur de 48px */
+    font-size: 24px; /* Taille de la police */
+    line-height: 48px; /* Hauteur de ligne */
+    text-align: left; /* Alignement du texte à gauche */
+    color: #ffeba7; /* Couleur de l'icône */
+    transition: all 200ms linear; /* Transition fluide */
+  }  
+
+/* Styles pour les boutons */
+.btnLogin {  
+    height: 44px; /* Hauteur de 44px */
+    font-size: 20px; /* Taille de la police */
+    font-weight: 600; /* Poids de la police */
+    text-transform: uppercase; /* Convertir le texte en majuscules */
+    -webkit-transition: all 200ms linear; /* Transition pour tous les changements d'état */
+    transition: all 200ms linear; /* Transition pour tous les changements d'état */
+    padding: 0 30px; /* Rembourrage de 0 sur les côtés et 30px en haut et en bas */
+    letter-spacing: 1px; /* Espacement entre les lettres */
+    display: -webkit-inline-flex; /* Affichage en ligne pour le flexbox (pour le préfixe WebKit) */
+    display: -ms-inline-flexbox; /* Affichage en ligne pour le flexbox (pour le préfixe Microsoft) */
+    display: inline-flex; /* Affichage en ligne pour le flexbox */
+    -webkit-align-items: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe WebKit) */
+    -moz-align-items: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe Mozilla) */
+    -ms-align-items: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe Microsoft) */
+    align-items: center; /* Alignement des éléments sur l'axe des blocs */
+    -webkit-justify-content: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe WebKit) */
+    -moz-justify-content: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe Mozilla) */
+    -ms-justify-content: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe Microsoft) */
+    justify-content: center; /* Alignement des éléments sur l'axe des blocs */
+    -ms-flex-pack: center; /* Alignement des éléments sur l'axe des blocs (pour le préfixe Microsoft) */
+    text-align: center; /* Alignement du texte au centre */
+    color: #ff8928;
+    background-color: #0B0C10;
+    border: 2px solid #ffde22;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  /* Styles pour les boutons au clic ou au focus */
+  .btnLogin:active,
+  .btnLogin:focus {  
+    background-color: #ff414e;
+    color: white;
+  }
+  
+  /* Styles pour les boutons au survol */
+  .btnLogin:hover {  
+    background-color: #ff414e;
+    color: white;
+    box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2); /* Ombre portée au survol */
+  }
+  
+  /* Styles pour le logo */
+  .logo {
+      position: absolute; /* Position absolue */
+      top: 30px; /* Position en haut de 30px */
+      right: 30px; /* Position à droite de 30px */
+      display: block; /* Affichage en bloc */
+      z-index: 100; /* Indice de positionnement */
+      transition: all 250ms linear; /* Transition fluide */
+  }
+  
+  /* Styles pour l'image du logo */
+  .logo img {
+      height: 26px; /* Hauteur de l'image du logo */
+      width: auto; /* Largeur automatique de l'image du logo */
+      display: block; /* Affichage en bloc */
+  }
+  

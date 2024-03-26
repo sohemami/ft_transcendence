@@ -1,0 +1,28 @@
+#imgModif {
+    margin-top: 30px;
+    height: 250px;
+    width: 250px;
+}
+
+#labelModif {
+    color: #ffde22;
+}
+
+#saveModif {
+    margin-left: 200px;
+}
+
+#changeImg,
+#saveModif {
+    margin-top: 50px;
+    background-color: #0b0b0b;
+    color: #ffde22;
+    border: #ff8928 2px solid;
+}
+
+#changeImg:hover,
+#saveModif:hover {
+    background-color: #ff8928;
+    color: #ffde22;
+    border: #ffde22 2px solid;
+}

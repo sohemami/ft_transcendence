@@ -1,0 +1,21 @@
+#imgProfil {
+    margin-top: -250px;
+}
+
+#btnFriend {
+    display: inline-block;
+    margin-right: 20px; /* Espacement entre les blocs */
+    margin-top: 15px;
+  }
+
+#Prenom {
+  margin-top: -65px;
+}
+  .container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+#lost {
+  margin-left: 50px;
+}
